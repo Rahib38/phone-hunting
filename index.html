@@ -11,23 +11,42 @@
 
 <body>
     <header>
-
+        <h2 class="text-5xl my-4 container mx-auto">Phone Hunting</h2>
     </header>
     <main class="container mx-auto mt-8">
         <section class="bg-gray-100 p-4 m-4 flex gap-4">
-            <input id="search-filed" type="text" placeholder="Search...." class="input input-bordered input-accent w-full max-w-xs" />
+            <input id="search-filed" type="text" placeholder="Search...."
+                class="input input-bordered input-accent w-full max-w-xs" />
             <button onclick="handleSearch()" class="btn btn-accent">Search</button>
         </section>
-        <section >
+        <section>
             <div id="loading-spiner" class="text-center my-40 hidden">
                 <span class="loading loading-ring  loading-lg"></span>
             </div>
             <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             </div>
         </section>
-        <section  id="show-btn" class="hidden my-8 text-center">
+        <section id="show-btn" class="hidden my-8 text-center">
             <button onclick="seeMore()" class="btn btn-active btn-secondary">See more</button>
         </section>
+
+        <!-- Open the modal using ID.showModal() method -->
+        
+        <dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+                <h3 id="show_phone_name" class="font-bold text-lg">Hello!</h3>
+                <div id="phoneDetailsContainer">
+                    <span class="text-2xl font-semibold"></span>
+                </div>
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+
     </main>
     <footer>
 
