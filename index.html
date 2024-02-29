@@ -1,20 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phone Hunting</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
     <header>
 
     </header>
-    <main>
-
+    <main class="container mx-auto mt-8">
+        <section class="bg-gray-100 p-4 m-4 flex gap-4">
+            <input id="search-filed" type="text" placeholder="Search...." class="input input-bordered input-accent w-full max-w-xs" />
+            <button onclick="handleSearch()" class="btn btn-accent">Search</button>
+        </section>
+        <section >
+            <div id="loading-spiner" class="text-center my-40 hidden">
+                <span class="loading loading-ring  loading-lg"></span>
+            </div>
+            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            </div>
+        </section>
+        <section  id="show-btn" class="hidden my-8 text-center">
+            <button onclick="seeMore()" class="btn btn-active btn-secondary">See more</button>
+        </section>
     </main>
     <footer>
 
     </footer>
     <script src="./scripts/script.js"></script>
 </body>
+
 </html>
